@@ -1,0 +1,23 @@
+<a href="/add-test" class="btn btn-primary">Ajouter</a>
+<table class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg">
+  <thead class="light">
+    <tr>
+      <th scope="col">matiere</th>
+      <th scope="col">jour</th>
+      <th scope="col">salle</th>
+      <th scope="col">Heure</th>
+      <th class="text-center" scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- *ngFor loop iterates over Student array and fetch the categorie's data -->
+    <!-- paginate pipe will add pagination in categorie's list, it won't show if items are less then 7 -->
+    <tr *ngFor="let test of items">
+      <td>{{test.payload.doc.data().matiere}} </td>
+      <td>{{test.payload.doc.data().jour}} </td>
+      <td>{{test.payload.doc.data().salle}} </td>
+      <td>{{test.payload.doc.data().heure}} </td>
+      <td class="text-center action-block"></td>
+    </tr>
+  </tbody>
+</table>

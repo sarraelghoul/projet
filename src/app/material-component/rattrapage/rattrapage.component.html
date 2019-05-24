@@ -1,0 +1,14 @@
+<table class="table">
+  <thead color="primary">
+    <tr>
+      <th>Date</th>
+      <th>Salle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <td>{{item.payload.doc.data().date}}</td>
+      <td>{{item.payload.doc.data().salle}}</td>
+    </tr>
+  </tbody>
+</table>

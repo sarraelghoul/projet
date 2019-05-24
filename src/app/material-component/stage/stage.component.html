@@ -1,0 +1,19 @@
+<table class="table">
+  <thead color="primary">
+    <tr>
+      <th>theme</th>
+      <th>duree</th>
+      <th>Date</th>
+      <th>Etudiant</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <td>{{item.payload.doc.data().theme}}</td>
+      <td>{{item.payload.doc.data().duree}}</td>
+      <td>{{item.payload.doc.data().date}}</td>
+      <td>{{item.payload.doc.data().id_etud}}</td>
+    </tr>
+  </tbody>
+</table>

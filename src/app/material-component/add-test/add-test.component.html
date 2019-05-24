@@ -1,0 +1,70 @@
+<div class="create-page">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Create User</li>
+    </ol>
+  </nav>
+  <div class="page-content">
+    <div class="row">
+
+      <div class="col col-md-8">
+
+        <form class="create-form" [formGroup]="exampleForm" novalidate (ngSubmit)="onSubmit(exampleForm.value)">
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput placeholder="Name" class="form-control" formControlName="matiere">
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validation_messages.matiere">
+              <mat-error
+                *ngIf="exampleForm.get('matiere').hasError(validation.type) && (exampleForm.get('matiere').dirty || exampleForm.get('matiere').touched)">
+                {{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput placeholder="heure debut" class="form-control" formControlName="jour">
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validation_messages.jour">
+              <mat-error
+                *ngIf="exampleForm.get('jour').hasError(validation.type) && (exampleForm.get('jour').dirty || exampleForm.get('jour').touched)">
+                {{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput type="number" min="0" max="100" placeholder="salle" class="form-control"
+                formControlName="salle">
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validation_messages.salle">
+              <mat-error
+                *ngIf="exampleForm.get('salle').hasError(validation.type) && (exampleForm.get('salle').dirty || exampleForm.get('salle').touched)">
+                {{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput type="text" placeholder="Salle" class="form-control" formControlName="heure">
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validation_messages.heure">
+              <mat-error
+                *ngIf="exampleForm.get('heure').hasError(validation.type) && (exampleForm.get('heure').dirty || exampleForm.get('heure').touched)">
+                {{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+          <div class="row submit-button-container">
+            <div class="col-md-4">
+              <button mat-raised-button class="submit-button" color="primary" type="submit"
+                [disabled]="!exampleForm.valid">Create</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

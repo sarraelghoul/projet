@@ -34,7 +34,7 @@
     "csv-to-firestore": "^1.0.0",
     "firebase": "^6.0.2",
     "hammerjs": "^2.0.8",
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "rxjs": "^6.3.3",
     "rxjs-compat": "^6.0.0-rc.0",
     "zone.js": "^0.8.26"
